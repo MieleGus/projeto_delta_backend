@@ -41,7 +41,8 @@ class ApiModel extends CI_Model{
         $this->uf = $data['uf'];
         $this->foto = $data['foto'];
         $this->db->where('id', $id);
-		$result = $this->db->update('aluno', $this);
+        $result = $this->db->update('aluno', $this);
+        // console.log($this->post('nome'))
        // $result = $this->db->update('aluno',$this,array('id' => $id));
          if($result)
          {
