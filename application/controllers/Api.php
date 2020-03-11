@@ -1,12 +1,14 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Methods: GET, OPTIONS");
 defined('BASEPATH') OR exit('No direct script acess allowed');
 require(APPPATH.'/libraries/REST_Controller.php');
-header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
 class Api extends REST_Controller{
     
        
     function __construct() {
+        header("Access-Control-Allow-Origin:*");
         parent::__construct();
         $this->load->model('ApiModel');
     }
